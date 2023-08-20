@@ -1,0 +1,47 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: utter_last
+
+
+- story: contact
+  steps:
+  - intent: contact
+  - action: utter_contact
+
+- story: rec
+  steps:
+  - intent: rec
+  - action: utter_rec
+- story: test
+  steps: 
+  - intent: test1
+  - action: utter_test1
+  - intent: answertest1
+  - action: utter_answertest1
+  - action: utter_next
+  - intent: test2
+  - action: utter_test2
+  - intent: answertest2
+  - action: utter_answertest2
+
+- story: therapy
+  steps:
+  - intent: therapy
+  - action: utter_therapy
+- story: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_thankyou   
+

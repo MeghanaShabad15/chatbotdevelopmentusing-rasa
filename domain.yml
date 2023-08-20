@@ -1,0 +1,145 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - dataentry
+  - contact
+  - name
+  - email
+  - update
+  - newname
+  - newemail
+  - rec
+  - therapy
+  - answertest1
+  - answertest2
+  - test1
+  - test2
+  - thankyou
+  
+entities:
+- name
+- email
+- newemail
+- newname
+
+forms:
+  update_form:
+    required_slots:
+      - newname
+      - newemail
+    
+  data_form:
+    required_slots:
+      - name
+      - email
+
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: name
+        conditions:
+          - active_loop: data_form
+
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: email
+        conditions:
+          - active_loop: data_form
+
+  newname:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: newname
+        conditions:
+          - active_loop: update_form
+
+  newemail:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: newemail
+        conditions:
+          - active_loop: update_form
+
+actions:
+- action_store_data_in_database
+- action_dataupdate
+
+responses:
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_contact:
+  - text: "You can reach us at xyz@gmail.com or 9876543210 and for additional Information please visit https://www.equinix.com/"
+
+  utter_update:
+  - text: "To update your email address. Please provide your details"
+
+  utter_goodbye:
+  - text: "You can reach us at xyz@gmail.com or 9876543210 and for additional Information please visit https://www.equinix.com/. Goodbye! " 
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Equinix."
+
+  utter_dataentry:
+  - text: "Kindly fill in the information as indicated below to receive notifications on the newest album releases"
+
+  utter_ask_name:
+  - text: "Please enter your name"
+
+  utter_ask_email:
+  - text: "Please enter your email id"
+
+  utter_ask_newemail:
+  - text: "Please enter your new email address"
+
+  utter_submit:
+  - text: "Ok. Thanks!"
+
+  utter_slots_values: 
+  - text: "I have recorded your name as {name} and email as {email}. You will be notified with the latest updates in the music industry. Hope you enjoyed the conversation"
+  utter_text:
+  - text: ""
+  utter_dataupdateslots_values:
+  - text: "I will remember that your name is {newname} and email is {newemail}"
+
+  utter_last:
+  - text: "Was my response helpful to you?"
+
+  utter_rec:
+  - text: "My recommendation would be to listen to Beyonce's well-known track, 'Say My Name,' which was awarded the Best R&B Performance at the 43rd Annual Grammy Awards and also If you're a fan of Kpop, you might want to check out the songs 'Dynamite' and 'Butter,' which have gained the most views on YouTube."
+
+  utter_test1:
+  - text: "Definitely! Here's your first question: Who is the composer of the music for Twilight Princess?"
+  utter_answertest1:
+  - text: "The answer is....... Toru Minegishi and Asuka Ohta. You are doing great"
+  utter_answertest2:
+  - text: "The album 'Dangerously in Love' brought the artist worldwide fame."
+  utter_test2:
+  - text: "What album made Beyonce a worldwide known artist?"
+  utter_next:
+  - text: "do you wanna try an other question"
+  utter_therapy:
+  - text: "Have you tried listening to ambient or instrumental music? Studies have shown that ambient and instrumental music can help reduce stress and anxiety. I recommend trying some tracks by artists like Brian Eno, Max Richter, or Ludovico Einaudi."
+  utter_thankyou:
+  - text: "I'm happy that I was able to assist you. Is there anything else you would like to ask me in the realm of music?"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

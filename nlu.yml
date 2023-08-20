@@ -1,0 +1,209 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: rec
+  examples: |    
+    - Hey, I'm looking for some new music to listen to. Do you have any suggestions?"
+    - I'm feeling a bit bored with my current playlist. Can you recommend some fresh tunes for me?"
+    - I'm in the mood for some new music. What are some of your favorite artists or songs right now?"
+    - I'm looking for something new to add to my workout playlist. Any recommendations?"
+    - I've been listening to the same old songs on repeat. Can you give me some suggestions for new music that I might like?"
+
+- intent: test1
+  examples: |
+    - I'm feeling like testing my music knowledge. Can you give me some trivia questions to see how much I know?
+    - Hey there! I want to challenge myself with some music trivia. Can you ask me some questions?
+    - I think I know a lot about music, but I want to put myself to the test. Could you ask me some music trivia questions?
+    - I'm in the mood to play a music trivia game. Could you give me some questions to see how well I do?
+    - I want to see how much I really know about music. Can you ask me some trivia questions to test my knowledge?
+
+- intent: test2
+  examples: |
+    - Yes i wanna try another question
+    - Yes 
+    - Sure
+    - Ofcourse
+    - Lets try this    
+- intent: answertest1
+  examples: |
+    - The answer is Toru Minegishi and Asuka Ohta
+    - Toru Minegishi and Asuka Ohta
+    - i think it is Toru Minegishi and Asuka Ohta
+    - im not sure
+    - You tell
+- intent: answertest2   
+  examples: |
+    - i dont know
+    - please tell me the answer
+    - i have no idea
+    - no clue
+    - may be 1999
+    
+
+- intent: therapy
+  examples: |
+    - I'm feeling really stressed and anxious right now. Do you have any suggestions for music that might help me unwind?
+    - Hey there, I'm looking for some calming music to listen to. Can you recommend something that might help me relax?
+    - I'm feeling a bit overwhelmed and need something to help me unwind. What kind of music would you suggest?
+    - Can you recommend some music that might help me destress? I'm feeling really anxious right now.
+    - I could use some soothing music to help me relax. Can you suggest some artists or genres that might fit the bill   
+- intent: contact
+  examples: |
+    - I want to talk to a customer representative
+    - I want to reach customer support
+    - I want to contact customer service
+    - Call Customer helpline
+    - I want contact information of Equinix
+    - I want to contact Equinix
+    - I want email address and phone number of Equinix
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: newname
+  examples: |   
+    - My name is [Meghana](name)
+    - My name is [satbir](name)
+    - My name is [Ananya](name)
+    - My name is [Sonali](name)
+
+- intent: name
+  examples: |
+    - My name is [Shubham](name)
+    - [ ](name)
+    - [Josh](name) 
+    - [](name)
+    - [Greg](name) 
+    - [David](name)
+    - [Amy](name) 
+    - [John](name) 
+    - [Sam](name) 
+    - [Linda](name) 
+    - [Tom](name)
+    - [Richard](name) 
+    - [Tracy](name) 
+    - [Sally](name) 
+    - [Philipp](name) 
+    - [Charlie](name)  
+    - [Ben](name) 
+    - [Susan](name) 
+    - [Lucy](name) 
+    - [Peter](name) 
+    - [Mark](name) 
+    - [Joseph](name)
+    - [Tan](name) 
+    - [Pete](name) 
+    - [Elon](name) 
+    - [Penny](name) 
+    - [Andrew](name) 
+    - [Lora](name) 
+    - [Stan](name) 
+    - [Susan](name)
+    - [Ross](name)
+    - [Bing](name)
+    - [Angelina](name) 
+    - [Julia](name) 
+    - [Laura](name) 
+    - [Ganesh](name) 
+    - [Mike](name) 
+    - [Monika](name) 
+    - [Dan](name) 
+    - [Suraj](name) 
+    - [Andrew](name) 
+    - [Ajay](name) 
+    - [Ding](name) 
+    - [Partia](name) 
+    - [Leo](name) 
+    - [Pari](name) 
+    - [Sanjay](name)
+    - [Jennifer](name)
+    - [GauravShekhar](name)  
+- intent: thankyou
+  examples: |
+    - Thank you
+    - Thanks
+    - Thank you I learned so much
+    - The songs are great
+    - No Thank you
+
+- intent: update
+  examples: |
+    - I want to update my profile
+    - update my email id
+    - update my email address
+    - change my email id
+    - update my email
+    - change my email
+    - change my email address
+
+- intent: email
+  examples: |
+    - my emailid [xyz](email)
+    - my emailid [abc@utdallas.edu](email)
+    - my emailid [pkj@gmail.org](email)
+    - my emailid [mko@gmail.com](email)
+    - my emailid [tyu@gmail.com](email)
+
+- intent: newemail
+  examples: |
+    - [xyz@utdallas.edu](email)
+    - [abc@utdallas.edu](email)
+    - [pkj@uta.org](email)
+    - [mko@utd.edu](email)
+    - [tyu@utdallas.edu](email)    
+
+- intent: dataentry
+  examples: |
+    - I want to save my profile to receive updates and reminders
+    - notify me with the new releases of Billie Elish and Harry styles music albums
+    - update me with the new releases in pop music
+    - save my profile to notify me about updates
+    - provide me reccomendations on classical music
+    - notify me about the reminders and top 10 billboard songs
+    - I want to save my information
+    - save my details and provide me reminders
+    - store my data and notify updates
+    - store information and provide me feedback
